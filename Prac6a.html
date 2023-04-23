@@ -1,0 +1,86 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+    <script>
+        var a = 1
+        function fact(x)
+        {
+          while(x>=1)
+          {
+              a = a*x
+              x = x-1
+          }
+          return a 
+        }
+
+        x = window.prompt("Enter the value of x : ")
+        Factorial = fact(x)
+        document.write("Factorial of "+x+" is "+a)
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body style="background: url(images.jpg);"></body>
+    <form name = "abc">
+        <span class = "text">Enter the value of x : </span><input type = "text" id = "xyz">
+    </form>
+    <button onclick = "fact()">Calculate Factorial</button>
+    <style>
+        button{
+            cursor : pointer;
+            margin-left : 550px;
+            margin-top : 10px;
+            width : 250px;
+            height: 40px;
+            background-color: rgb(16, 55, 112);
+            color : sandybrown;
+            font-size : 25px;
+        }
+        span{
+            margin-left:400px;
+            font-size:35px;
+            font-weight: bold;
+            text-transform: capitalize;
+            font-family: sans-serif;
+            margin: left 50px;
+            margin-top:250px;
+        }
+        #xyz{
+            margin-top:250px;
+            width : 200px;
+            height : 25px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function fact()
+        {
+          var a = 1
+          x = document.getElementById("xyz").value
+          temp = x
+        //   document.write(x)
+          while(x>=1)
+          {
+              a = a*x
+              x = x-1
+          }
+          document.write("Factorial of "+temp+" is "+a)
+        }
+    </script>
+</body>
+</html>
+

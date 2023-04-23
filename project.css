@@ -1,0 +1,31 @@
+.heading{
+    border : solid 3px white;
+    border-radius: 20px;
+    margin-top: 50px;
+    width: 200px;
+    padding: 3px;
+    font-size: 32px;
+    text-align: center;
+    margin-left: 570px;
+    color: white;
+}
+table{
+    color: #fff;
+    margin-left: 180px;
+    margin-top: 110px;
+    box-shadow: 0 5px 5px #132535;
+}
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: 6px;
+}
+th, td {
+  background-color: rgb(3, 200, 214);
+}
+th{
+    font-size: 25px;
+}
+td{
+    font-size: 21.5px;
+}

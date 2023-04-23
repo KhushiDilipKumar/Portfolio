@@ -1,0 +1,62 @@
+.heading{
+    border : solid 3px white;
+    border-radius: 20px;
+    margin-top: 50px;
+    width: 160px;
+    padding: 3px;
+    font-size: 32px;
+    text-align: center;
+    margin-left: 592px;
+    color: white;
+}
+.content{
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 350px;
+    background: #28b463;
+    margin-top: 80px;
+    margin-left: 260px;
+    border: solid 6px #1c2833;
+    box-shadow: 0 13px 13px #1c2833;
+    border-radius: 2%;
+    padding: 15px;
+}
+.style{
+    font-size: 20px;
+    color: white;
+    font-weight:400;
+    letter-spacing: 1.2px;
+    /* text-shadow: 0 0.5px 0.5px black; */
+    text-align: left;
+}
+.red:hover{
+    background-color: rgb(98, 197, 136);
+    padding: 6px;
+    border-radius: 2%;
+}
+.blue:hover{
+    background-color: rgb(98, 197, 136);
+    padding: 6px;
+    border-radius: 2%;
+}
+.green:hover{
+    background-color: rgb(98, 197, 136);
+    padding: 6px;
+    border-radius: 2%;
+}
+.yellow:hover{
+    background-color: rgb(98, 197, 136);
+    padding: 6px;
+    border-radius: 2%;
+}
+.purple:hover{
+    background-color: rgb(98, 197, 136);
+    padding: 6px;
+    border-radius: 2%;
+}
+.pink:hover{
+    background-color: rgb(98, 197, 136);
+    padding: 6px;
+    border-radius: 2%;
+}

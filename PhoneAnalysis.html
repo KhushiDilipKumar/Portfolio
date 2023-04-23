@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        
+        <title> Features and Graphs </title>
+    </head>
+
+    <body>
+
+        <h1 align = 'center'> Phone features </h1>
+
+        <br><br>
+
+        <canvas id="PhonePrice" style="width:100%; max-width:850px"></canvas>
+
+        <br><br><br><br><br><br>
+
+        <canvas id="PhoneMemory" style="width:100%; max-width:850px"></canvas>
+
+        <br><br><br><br><br><br>
+
+        <canvas id="PhoneScreenSize" style="width:100%; max-width:850px"></canvas>
+
+        <br><br><br><br><br><br>
+
+        <canvas id="PhoneCameraClarity" style="width:100%; max-width:850px"></canvas>
+
+        <br><br><br><br><br><br>
+       
+        <canvas id="PhoneRAM" style="width:100%; max-width:850px"></canvas>
+
+        <br><br><br><br><br><br>
+
+        <canvas id="PhoneWeight" style="width:100%; max-width:850px"></canvas>
+
+        <br><br><br><br><br><br>
+
+        <canvas id="PhoneBatteryRating" style="width:100%; max-width:850px"></canvas>
+
+        <br><br><br><br><br><br>
+
+        <script>
+
+            
+            var PhoneModels = ['Samsung Galaxy M33 5G', 'Oppo A31', 'Redmi 9 Activ', 'Redmi Note 11', 'Oppo A15s', 'Vivo Y21'];
+
+            var PhoneNames = ['Samsung Galaxy M33', 'Oppo A31', 'Redmi 9', 'Redmi Note 11', 'Oppo A15s', 'Vivo Y21'];
+
+            var PhonePrice = [25000, 16000, 11000, 20000, 15000, 18000, 5500];
+
+            var PhoneMemoryStorageSpaceInGB = [128, 128, 64, 128, 128, 64, 0];
+
+            var PhoneScreenSize = [16.72, 16.50, 16.58, 16.33, 16.55, 16.62, 16.20];
+
+            var PhoneCameraClarityInMP = [50, 12, 13, 50, 13, 13, 2];
+
+            var PhoneRAMinGB = [6, 6, 4, 6, 4, 4, 1];
+
+            var PhoneWeightInGrams = [215, 180, 194, 179, 175, 182, 150];
+
+            var PhoneBatteryRatingInMilliAmpereHour = [6000, 4230, 5000, 5000, 4230, 5000, 3000];
+
+            var GraphColours = ['red', 'green', 'yellow', 'purple', 'orange', 'blue'];
+
+
+            
+            new Chart ('PhonePrice', {
+                type: 'bar',
+                data: {
+                    labels: PhoneNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: PhonePrice
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Price of phone models'
+                    }
+                }
+            });
+
+
+            new Chart ('PhoneMemory', {
+                type: 'bar',
+                data: {
+                    labels: PhoneNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: PhoneMemoryStorageSpaceInGB
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Storage space (in GB) of phone models'
+                    }
+                }
+            });
+
+
+            new Chart ('PhoneScreenSize', {
+                type: 'bar',
+                data: {
+                    labels: PhoneNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: PhoneScreenSize
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Screen size (in cms) of phone models'
+                    }
+                }
+            });
+
+            new Chart ('PhoneCameraClarity', {
+                type: 'bar',
+                data: {
+                    labels: PhoneNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: PhoneCameraClarityInMP
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Camera clarity (in mega pixels) of phone models'
+                    }
+                }
+            });
+
+
+            new Chart ('PhoneRAM', {
+                type: 'bar',
+                data: {
+                    labels: PhoneNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: PhoneRAMinGB
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'RAM size (in GB) of phone models'
+                    }
+                }
+            });
+
+
+            new Chart ('PhoneWeight', {
+                type: 'bar',
+                data: {
+                    labels: PhoneNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: PhoneWeightInGrams
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Weight (in grams) of phone models'
+                    }
+                }
+            });
+
+
+            new Chart ('PhoneBatteryRating', {
+                type: 'bar',
+                data: {
+                    labels: PhoneNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: PhoneBatteryRatingInMilliAmpereHour
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Battery rating (in milli Ampere hours) of phone models'
+                    }
+                }
+            });
+
+        </script>
+    </body>
+</html>

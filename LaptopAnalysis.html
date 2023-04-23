@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        
+        <title> Features and Graphs </title>
+    </head>
+
+    <body>
+
+        <br><br>
+        
+        <h1 align = 'center'> Laptop features </h1>
+        
+        <br><br>
+        
+        <canvas id="LaptopScreenSize" style="width:100%; max-width:850px"></canvas>
+
+        <br><br><br><br><br><br>
+
+        <canvas id="LaptopRAM" style="width:100%; max-width:850px"></canvas>
+f
+        <br><br><br><br><br><br>
+
+        <canvas id="LaptopPrice" style="width:100%; max-width:850px"></canvas>
+
+        <br><br><br><br><br><br>
+
+        <canvas id="LaptopWeight" style="width:100%; max-width:850px"></canvas>
+
+        <br><br><br><br><br><br>
+
+        <canvas id="LaptopProcessorSpeed" style="width:100%; max-width:850px"></canvas>
+
+        <br><br><br><br><br><br>
+
+        <canvas id="LaptopBatteryLife" style="width:100%; max-width:850px"></canvas>
+        
+        <br><br><br><br><br><br>
+
+        <script>
+
+            var LaptopModels = ['HP Pavilion AMD Ryzen Gaming Laptop', 'Lenovo Legion 5 AMD Ryzen 7 Refresh Rate 165 Hz', 'Lenovo IdeaPad Gaming 3 11th Gen Intel i5', 'Lenovo ThinkBook 15 Intel 11th Gen Core i7 Thin and Light Laptop', 'Lenovo IdeaPad 3 11th Gen Intel i3 15.6 inches FHD Thin & Light Laptop', 'Lenovo IdeaPad Slim 5 11th Gen Intel Core i5 15.6 inches FHD Thin & Light Laptop'];
+
+            var LaptopNames = ['HP Pavilion Ryzen', 'Lenovo Legion 5', 'Lenovo IdeaPad Gaming', 'Lenovo ThinkBook 15', 'Lenovo IdeaPad 3', 'Lenovo IdeaPad Slim 5'];
+
+            var LaptopFeatures = ['Screen size', 'CPU/Processor brand', 'RAM size', 'Price', 'Weight', 'Height', 'Width', 'Processor speed', 'Graphics card RAM size', 'Battery life'];
+
+            var LaptopScreenSize = [39.61, 39.65, 39.64, 39.62, 39.72, 39.74, 39.5];
+
+            var LaptopCPU = ['AMD', 'Nvidia', 'Nvidia', 'Intel', 'Intel', 'Intel'];
+
+            var LaptopRAMInGB = [8, 16, 8, 16, 8, 16, 0];
+
+            var LaptopPrice = [71343, 186090, 114690, 128520, 64490, 101390, 35000];
+
+            var LaptopWeightInKg = [1.98, 2.40, 2.25, 2.45, 2.33, 2.21, 1.3];
+
+            var LaptopProcessorSpeedInGigaHertz = [4.2, 4.4, 4.3, 4.6, 4.1, 4.3];
+
+            var LaptopBatteryLifeInHours = [8.4, 8.1, 6.2, 6.7, 6.9, 7.3, 5.5];
+
+            var GraphColours = ['red', 'green', 'yellow', 'purple', 'orange', 'blue'];
+
+
+            new Chart ('LaptopScreenSize', {
+                type: 'bar',
+                data: {
+                    labels: LaptopNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: LaptopScreenSize
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Screen size of laptop models'
+                    }
+                }
+            });
+
+
+            new Chart ('LaptopRAM', {
+                type: 'bar',
+                data: {
+                    labels: LaptopNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: LaptopRAMInGB
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'RAM size (in GB) of laptop models'
+                    }
+                }
+            });
+
+
+            new Chart ('LaptopPrice', {
+                type: 'bar',
+                data: {
+                    labels: LaptopNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: LaptopPrice
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Price of laptop models'
+                    }
+                }
+            });
+
+
+            new Chart ('LaptopWeight', {
+                type: 'bar',
+                data: {
+                    labels: LaptopNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: LaptopWeightInKg
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Weight (in kg) of laptop models'
+                    }
+                }
+            });
+
+
+            new Chart ('LaptopProcessorSpeed', {
+                type: 'bar',
+                data: {
+                    labels: LaptopNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: LaptopProcessorSpeedInGigaHertz
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Processor speed (in GHz) of laptop models'
+                    }
+                }
+            });
+
+
+            new Chart ('LaptopBatteryLife', {
+                type: 'bar',
+                data: {
+                    labels: LaptopNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: LaptopBatteryLifeInHours
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Battery life (in hours) of laptop models'
+                    }
+                }
+            });
+
+        </script>
+    </body>
+</html>

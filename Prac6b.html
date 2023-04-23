@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var A = []
+        var B = []
+        var C = []
+       n =  window.prompt("Enter the no. of elements in Array 1")
+       for(i=0;i<n;i++)
+       {
+         A[i] = window.prompt("Enter A["+i+"]")
+       }
+       document.write("<h2>"+"Elements of Array 1 :- "+A.valueOf()+"<h2>")
+       document.write("<br>")
+       m =  window.prompt("Enter the no. of elements in Array 2")
+       for(i=0;i<m;i++)
+       {
+         B[i] = window.prompt("Enter B["+i+"]")
+       }
+       document.write("<h2>"+"Elements of Array 2 :- "+B.valueOf()+"<h2>")
+       C = A.concat(B);
+       document.write("<br>")
+       document.write("<h2>"+"Elements of Array 3 :- "+C.valueOf()+"<h2>")
+       var UniqueArr = []
+       for(let i of C)
+       {
+         if(UniqueArr.indexOf(i) == -1)
+         {
+            UniqueArr.push(i)
+         }
+       }
+       document.write("<br>")
+       document.write("<h2>"+"Final Array : "+UniqueArr.valueOf()+"<h2>")
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,400&display=swap');
+body{
+    height: 300px;
+}
+.heading{
+    border : solid 3px white;
+    border-radius: 20px;
+    margin-top: 50px;
+    width: 200px;
+    padding: 3px;
+    font-size: 32px;
+    text-align: center;
+    margin-left: 550px;
+    color: white;
+}
+.tenth{
+    margin-top: -80px;
+    width: 100px;
+    height: 250px;
+}
+.twelth{
+    margin-top: -105px;
+    width: 300px;
+    height: 400px;
+}
+.college{
+    margin-top: -78px;
+    width: 200px;
+    height: 400px;
+}
+/* .change{
+    display: none;
+}
+.tenth:hover + .change{
+    display: block; */
+.img1{
+    /* position: relative; */
+    width: 100px;
+    height: 250px;
+    margin-top: 290px;
+    margin-left: 70px;
+}
+.img1 p{
+    /* position: absolute; */
+    background:  #1c2833;
+    color: white;
+    font-family: "Merriweather", sans-serif;
+    margin-bottom: 5px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.img1:hover{
+    cursor: pointer;
+}
+.img1:hover p{
+    /* position: relative; */
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7; 
+    margin-top: -350px;
+}
+
+.img2{
+    width: 100px;
+    height: 250px;
+    margin-top: -400px;
+    margin-left: 380px;
+}
+.img2 p{
+    /* position: absolute; */
+    background:  #1c2833;
+    color: white;
+    font-family: "Merriweather", sans-serif;
+    margin-bottom: 5px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.img2:hover{
+    cursor: pointer;
+}
+.img2:hover p{
+    /* position: relative; */
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7; 
+    margin-top: -430px;
+    margin-left: 180px;
+}
+
+.img3{
+    width: 100px;
+    height: 250px;
+    margin-top: -300px;
+    margin-left: 900px;
+}
+.img3 p{
+    background:  #1c2833;
+    color: white;
+    font-family: "Merriweather", sans-serif;
+    margin-bottom: 5px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.img3:hover{
+    cursor: pointer;
+}
+.img3:hover p{
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7; 
+    margin-top: -440px;
+    margin-left: 140px;
+}
+.left{
+    margin-top: 112px;
+    width: 440px;
+    height: 158px;
+    float: left;
+    background-color: pink;
+    margin-left: 4px;
+}
+.middle{
+    margin-top: 90px;
+    width: 446px;
+    height: 180px;
+    float: left;
+    background-color: rgb(150, 192, 209);
+}
+.right{
+    margin-top: 60px;
+    width: 442px;
+    float: left;
+    height: 210px;
+    background-color: rgb(162, 228, 156);
+}

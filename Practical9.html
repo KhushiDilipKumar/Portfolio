@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        .main{
+          height : 700px;
+        }
+        .heading{
+            background-color: aqua;
+            border : solid 2px aqua;
+            height: 70px;
+            display: flex;
+            align-items: center;
+        }
+        i{
+            color : white;
+            margin-left : 20px;
+            cursor : pointer;
+        }
+        .content{
+            margin-left : 80px;
+            width : 700px; 
+            height : 30px;
+            border-radius: 5%;
+        }
+        .logo{
+            width : 120px;
+            height : 70px;
+            margin-left: 50px;
+        }
+        .grayBox{
+            background-color: rgb(167, 167, 167);
+            border : solid 2px rgb(167, 167, 167);
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Dropdown Button */
+        .dropbtn {
+          background-color: #04AA6D;
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {display: block;}
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {background-color: #3e8e41;}
+        
+        .social_footer_ul { display:table;list-style-type:none; position:relative;margin-top:-40px;}
+        .social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
+        .social_footer_ul li a { color:black; border:solid 3px black; padding:8px;border-radius:50%;}
+        .social_footer_ul li i {  width:20px; height:20px;}
+
+        .foot{
+          position : relative; 
+        }
+        .contact{
+          font-size : 30px;
+          color : white;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          margin-left : 20px;
+          position : relative; 
+          bottom : -280px;
+          z-index : 1;
+          font-weight: bold;
+        }
+        .map{
+          width : 200px;
+          height : 100px;
+          z-index : 1;
+          position: relative;
+          bottom : -360px;
+          margin-left: 30px;
+        }
+        .add{
+          position :relative;
+          z-index: 1;
+          color:white;
+          font-size : 20px;
+          bottom : -220px;
+          left : 270px;
+        }
+        .liningBackground{
+          position : relative;
+          width : 100%;
+        }
+        .gif{
+          position: relative;
+          top : -700px;
+        }
+        .bottom1{
+          position : relative;
+          top : -500px;
+        }
+    </style>
+</head>
+<body class = "main" style =  "margin : 0px">
+    <header class = "heading">
+        <i style = "font-size : 30px" class="fa fa-solid fa-bars"></i>
+        <img class = "logo" src = "shopping1.png">
+        <input class = "content" type = "text" placeholder = "Search essentials, groceries, and more...">
+        <i style = "font-size : 30px;margin-left : 40px;" class="fa fa-user" aria-hidden="true"></i>
+        <a href = "submit.html" style = "text-decoration : none;cursor : pointer;border:none;margin-left:10px;background-color : transparent;
+        color : white;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:17px;"><b>Sign in / Sign up</b></a> 
+        <i style = "cursor : pointer;font-size : 30px;margin-left : 30px;" class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <button onclick = "cart()" style = "background-color:transparent;border:none;cursor : pointer;margin-left:10px;color : white;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:20px;"><b>Cart</b></button> 
+    </header>
+    <header class = "grayBox">
+        
+          <div class="dropdown">
+            <button style = "margin-left : 120px;" class="dropbtn">Groceries</button>
+            <div class="dropdown-content">
+              <a href="#">Fruits & Vegetables</a>
+              <a href="https://www.pittsfordfarmsdairy.com/">Dairy & Bakery</a>
+              <a href="#">Staples</a>
+              <a href="#">Snacks & Branded Foods</a>
+              <a href="#">Beverages</a>
+              <a href="#">Personal Care</a>
+            </div>
+          </div> 
+
+          <div class="dropdown">
+            <button style = "margin-left : 90px;" class="dropbtn">Premium Fruits</button>
+            <div class="dropdown-content">
+              <a href="#">Avocado,Peach,Plum</a>
+              <a href="#">Cherries,Berries</a>
+              <a href="#">Citrus Fruits</a>
+              <a href="https://www.naturesbasket.co.in/Online-grocery-shopping/Fruits-Vegetables/5_0_0">Apples,Pears</a>
+              <a href="#">Banana,Coconut,Melon</a>
+              <a href="#">Dates</a>
+              <a href="#">Seasonal & Minor Fruits</a>
+            </div>
+          </div> 
+
+          <div class="dropdown">
+            <button style = "margin-left : 90px;" class="dropbtn">Home & Kitchen</button>
+            <div class="dropdown-content">
+              <a href="#">Kitchenware</a>
+              <a href="#">Dining</a>
+              <a href="#">Furnishing</a>
+              <a href="https://www.housebeautiful.com/shopping/best-stores/g22092429/cheap-home-decor-websites/">Home Decor</a>
+              <a href="#">Bathroom & Laundry</a>
+              <a href="#">Mops,Brushes & Scrubs</a>
+              <a href="#">Bags & Travel Luggage</a>
+            </div>
+          </div> 
+
+          <div class="dropdown">
+            <button style = "margin-left : 90px;" class="dropbtn">Fashion</button>
+            <div class="dropdown-content">
+              <a href="https://www.myntra.com/">Men</a>
+              <a href="#">Women</a>
+              <a href="#">Boys</a>
+              <a href="#">Girls</a>
+              <a href="#">Kids</a>
+              <a href="#">Infants</a>
+            </div>
+          </div> 
+
+          <div class="dropdown">
+            <button style = "margin-left : 90px;" class="dropbtn">Electronics</button>
+            <div class="dropdown-content">
+              <a href="#">Mobiles & Tablets</a>
+              <a href="#">TV & Speaker</a>
+              <a href="#">Home Appliances</a>
+              <a href="#">Computers</a>
+              <a href="#">Cameras</a>
+              <a href="https://www.shoppersstop.com/homeware-appliances-kitchen-appliances/c-A806050">Kitchen Appliances</a>
+              <a href="#">Smart Devices</a>
+              <a href="#">Gaming</a>
+            </div>
+          </div> 
+ 
+          <div class="dropdown">
+            <button style = "margin-left : 90px;" class="dropbtn">Beauty</button>
+            <div class="dropdown-content">
+              <a href="#">Make-Up</a>
+              <a href="#">Hair</a>
+              <a href="#">Skin Care</a>
+              <a href="https://www.nordstrom.com/browse/beauty/fragrance">Fragrances</a>
+              <a href="#">Personal Care</a>
+              <a href="#">Mom & Baby</a>
+              <a href="#">Men's Grooming</a>
+              <a href="#">Women's Grooming</a>
+              <a href="#">Fitness</a>
+            </div>
+          </div> 
+    </header>
+    <img class = "liningBackground" src = "maxresdefault.jpg">
+    <img class = "gif" style = "width : 600px;margin-left:400px;margin-top : 130px;margin-bottom: -140px;" src = "storytelling.gif">
+    <footer class = "bottom1">
+    <img class = "map" src = "map.png"><br><br>
+    
+    <address class = "add"><u>Reliance Fresh</u><br><br>4H3W+QXR, Sangath Mall Ground Floor, 4D Rd,<br>Opposite Vishwakarma Government Engineering College,<br>Nigam Nagar, Motera, Ahmedabad, Gujarat 382424</address>
+    <y class = "contact">Contact Us</y>
+    <br>
+    <y class = "contact">+91 2341235612</y>
+    <img class = "foot" style = "height : 370px;width:1345px;" src = "footer.jpg">
+    <div class = "bottom">
+        <ul class="social_footer_ul">
+            <li><a href="#"><i style = "color : black;font-size : 23px;font-weight: bold;margin-left:3px;margin-right:-2px;" class="fa fa-facebook-f"></i></a></li>
+            <li><a href="#"><i style = "color : black;font-size : 23px;font-weight: bold;margin-left:1px;margin-right:-2px;" class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i style = "color : black;font-size : 23px;font-weight: bold;margin-left:3px;margin-right:-2px;" class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i style = "color : black;font-size : 23px;font-weight: bold;margin-left:2px;margin-right:-3px;" class="fa fa-instagram"></i></a></li>
+        </ul>
+    </div>
+    </footer>
+    <script>
+      function cart()
+      {
+        window.alert("Your product has added to the cart");
+      }
+    </script>
+</body>
+</html>
+

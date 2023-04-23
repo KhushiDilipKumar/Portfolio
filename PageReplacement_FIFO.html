@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .heading{
+       color : white;
+       font-family: sans-serif;
+       border : solid 4px white;
+       border-radius : 5%;
+       text-align : center;
+       width : 400px;
+       padding : 6px;
+       margin-left : 455px;
+       animation-name: page1;
+       animation-duration: 3s;
+       animation-timing-function: ease;
+    }
+    @keyframes page1 {
+        0%{
+            font-size : 30px;
+        }
+        50%{
+            font-size : 40px;
+        }
+        100%{
+            font-size : 30px;
+        }
+    }
+
+    .content{
+        color : white;
+        font-family: sans-serif;
+        text-align : center;
+        font-size: 18px;
+        margin : 50px;
+    }
+    label{
+        text-align: center;
+        margin-left : 460px;
+        font-size: 22px;
+        font-weight: bold;
+        font-family: sans-serif;
+        color : white;
+    }
+    button{
+        margin-left : 640px;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: none;
+        border : none;
+        cursor : pointer;
+        border-radius : 4%;
+        width : 100px;
+        height : 40px;
+        opacity: 0.6;
+    }
+    .styling{
+        color : blue;
+        font-size : 20px;
+        font-family : sans-serif;
+    }
+    </style>
+</head>
+<body style = "background-image: url(https://imgs.search.brave.com/AKgSHlU2liuWqFSL6Hr52e2KHzIarYu9iaajAcQNWSo/rs:fit:1200:1080:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDIxNTI4/NjcuanBn); background-size: cover;"> 
+    <h1 class = "heading">Page Replacement</h1>
+    <p class = "content">In an operating system that uses paging for memory management,<br>a page replacement algorithm is needed to decide which page<br>needs to be replaced when new page comes in. 
+    <br></b><br><span style="font-weight:bold;">Page Fault</span> – A page fault happens when a running program accesses a memory<br>page that is mapped into the virtual address space, but not loaded in physical memory</p>
+    <h2 style = "text-align: center;color:white;font-family: sans-serif;">1.) FIFO Page Replacement Algorithm (First In First Out)</h2>
+    <p class = "content">This is the simplest page replacement algorithm. In this<br>algorithm, operating system keeps track of all pages in the<br>memory in a queue, oldest page is in the front of the queue. When<br>a page needs to be replaced page in the front of the queue is<br>selected for removal.</p>
+    <h2 style = "text-align: center;color:white;font-family: sans-serif;">2.) Optimal Page Replacement Algorithm (First In First Out)</h2>
+    <p class = "content">In this algorithm, pages are replaced which would not be used<br>for the longest duration of time in the future. </p>
+    <h2 style = "text-align: center;color:white;font-family: sans-serif;">3.) LRU Page Replacement Algorithm (Least Recently Used)</h2>
+    <p class = "content">In this algorithm that page will be replaced which is least recently used. </p>
+    <h2 style = "text-align: center;color:white;font-family: sans-serif;">4.) MRU Page Replacement Algorithm (Most Recently Used)</h2>
+    <p class = "content">In this algorithm that page will be replaced which is most recently used. </p>
+    <br><br><label for="noOfpage">Enter the no. of pages : </label>
+    <input type = "text" id = "noOfpage" name = "noOfpage"><br><br>
+    <button onClick = "PageReplacement()">Enter</button>
+    <!-- <label for="frames">Enter the total no. of frames : </label>
+    <input type = "text" id = "frames" name = "frames"> -->
+    <script type = "text/javascript" src = "FIFO_js.js"></script> 
+</body> 
+</html>

@@ -1,0 +1,305 @@
+<html> 
+<head> 
+<title> Student Registration Form </title> 
+</head> 
+<body bgcolor = "#90EE90" style = "border:solid 5px gray ;width :600px;margin-left:370px"> 
+<h1 style = "color:gray;text-align:center;">Student Online Registration Form</h1><br> 
+<form action = "submit.html" method = "post" style="margin:10px"> 
+Roll No : <input id = "rollno" type = "text" name = "rollNo" placeholder="20BCE001"><br><br>
+First Name : <input id = "Myname" style = "margin:5px" type = "text" name = "FirstName" placeholder="Enter your name"><br><br>
+<!-- Middle Name : <input style = "margin:5px" type = "text" name = "MiddleName"> 
+Last Name : <input style = "margin:5px" type = "text" name = "LastName"><br><br>  -->
+Father's Name : <input id = "Fname" style = "margin:5px" type = "text" name = "FatherName" placeholder="Enter father's name"><br><br> 
+Mother's Name : <input id = "Mname" style = "margin:5px" type = "text" name = "MotherName" placeholder="Enter mother's name"><br><br> 
+Gender : Male<input type = "radio" name = "gender" id = "radio"> 
+Female<input type = "radio" name = "gender" id = "radio"> 
+Other<input type = "radio" name = "gender" id = "radio"><br><br> 
+Date of Birth : <input type = "date" name = "DOB" id = "DOB"><br><br> 
+E-mail : <input id = "myemail" type = "email" name = "email" placeholder="Enter Email Id"><br><br> 
+Password : <input id = "password" type = "password" name = "password"><br><br>
+Confirm Password : <input id = "ConfirmPW" type = "password" name = "ConfirmPW"><br><br>
+Degree Program : <select> <option value = "CSE" name="degree">CSE</option> 
+<option value = "MBA" name="degree">CSE MBA</option> 
+<option value = "ECE" name="degree">ECE</option> 
+<option value = "EE" name="degree">EE</option> 
+<option value = "CE" name="degree">CE</option> 
+</select><br><br> 
+<table border = 1> 
+<tr> <th colspan = "4">Permanent Address</th> </tr> 
+<tr> 
+<th>Street Address</th> 
+<td colspan = "3"><input type = "text" name = "address" size = "55"></td> 
+</tr> 
+<tr> 
+<th>City</th> 
+<td><input type = "text" name = "city"></td> 
+<th>State</th> 
+<td><input type = "text" name = "state"></td> 
+</tr> 
+<tr> 
+<th>Pin Code*</th> 
+<td><input type = "number" name = "pin" id = "pin"></td> 
+<th>Country</th>
+<td><input type = "text" name = "country"></td> 
+</tr> 
+</table><br> 
+Sports : Cricket<input type = "checkbox" name = "hobby"> 
+Volleyball<input type = "checkbox" name = "hobby"> 
+Badminton<input type = "checkbox" name = "hobby"> 
+Tennis<input type = "checkbox" name = "hobby"> 
+Other<input type = "checkbox" name = "hobby"><br> 
+<textarea name = "other" rows = "1" cols="55"></textarea><br><br>
+Student's Contact : <input type = "tel" name = "phoneNo" id = "phoneNo" placeholder="1234567890"><br><br> 
+Parent's Contact : <input type = "tel" name = "phoneNo" id = "parentNo" placeholder="1234567890"><br><br> 
+<!-- <input type="submit" onsubmit="formValidate()"> -->
+<button onclick = "return formValidate()">Submit</button> 
+</form> 
+<script>
+  function formValidate()
+  {
+  var roll = document.getElementById("rollno")
+  var s = roll.value
+
+  var name = document.getElementById("Myname");
+  var s1 = name.value
+
+  var FatherName = document.getElementById("Fname")
+  var s2 = FatherName.value
+
+  var MotherName = document.getElementById("Mname")
+  var s3 = MotherName.value
+
+  var radio = document.getElementsByName("gender");
+  var n = 0
+
+  var email = document.getElementById("myemail");
+  var s4 = email.value
+
+  var pw = document.getElementById("password")
+  var s5 = pw.value
+
+  var pwFormat = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+  var pwConfirm = document.getElementById("ConfirmPW")
+  var s6 = pwConfirm.value
+
+  var select = document.getElementsByName("degree");
+  var q = 0
+
+  var pincode = document.getElementById("pin");
+  var s7 = pincode.value
+
+  var phone = document.getElementById("phoneNo");
+  var s8 = phone.value 
+
+  var Parentphone = document.getElementById("parentNo");
+  var s9 = Parentphone.value 
+
+  var checkbox = document.getElementsByName("hobby");
+  var m = 0
+
+  if(roll.value == "")
+  {
+    window.alert("Roll no. is mandatory")
+    return false 
+  }
+  else 
+  {
+    if((/[a-zA-Z]/).test(s[0]) || (/[a-zA-Z]/).test(s[1]) || (/[0-9]/).test(s[2]) || (/[0-9]/).test(s[3]) || (/[0-9]/).test(s[4]) || (/[a-zA-Z]/).test(s[5]) || (/[a-zA-Z]/).test(s[6]) || (/[a-zA-Z]/).test(s[7]) )
+    {
+      window.alert("Enter a valid format")
+      return false
+    }
+    else 
+    {
+      if(s1 == "")
+      {
+        window.alert("Please enter your name");
+        return false 
+      }
+      else
+      {
+        if(!isNaN(s1))
+        {
+          window.alert("Enter a valid name");
+          return false
+        }
+        else
+        {
+          if(!(s1.charCodeAt(0)>=65 && s1.charCodeAt(0)<=90))
+          {
+            window.alert("First letter should be capital")
+            return false
+          }
+          else 
+          {
+            if(s2 == "")
+            {
+              window.alert("Please enter name");
+              return false
+            }
+            else
+            {
+              if(!isNaN(s2))
+              {
+                window.alert("Enter a valid name");
+                return false
+              }
+              else
+              {
+                if(!(s2.charCodeAt(0)>=65 && s2.charCodeAt(0)<=90))
+                {
+                  window.alert("First letter should be capital")
+                  return false
+                }
+                else
+                {
+                  if(s3 == "")
+                  {
+                    window.alert("Please enter name");
+                    return false
+                  }
+                  else
+                  {
+                    if(!isNaN(s3)) 
+                    {
+                      window.alert("Enter a valid name");
+                      return false
+                    }
+                    else
+                    {
+                      if(!(s3.charCodeAt(0)>=65 && s3.charCodeAt(0)<=90))
+                      {
+                        window.alert("First letter should be capital")
+                        return false 
+                      }
+                      else
+                      {
+                         for(var i=0; radio[i]; ++i)
+                         {
+                          if(radio[i].checked)
+                          {
+                            n = n+1;
+                          } 
+                         }
+                         if(n==0)
+                         {
+                           window.alert("No radio button selected")
+                           return false
+                         }
+                        else 
+                        {
+                          if(!((s+"@nirmauni.ac.in").match(s4)))
+                          {
+                            window.alert("Enter email-id in proper format")
+                            return false
+                          }
+                          else
+                          {
+                            if(s5 == "")
+                            {
+                              window.alert("Password is compulsory to fill")
+                              return false
+                            } 
+                            else
+                            {
+                              if(s5.length < 8)
+                              {
+                                window.alert("Minimum length of password should be 8")
+                                return false
+                              }
+                              else
+                              {
+                                if(!(pwFormat.test(s5)))
+                                {
+                                   window.alert("Password must contain at least one uppercase, at least one lowercase,\nat least one numeric digit and at least one special character")
+                                   return false
+                                }
+                                else
+                                {
+                                  if(s5 != s6)
+                                  {
+                                    window.alert("Password and Confirm Password should be same")
+                                    return false
+                                  }
+                                  else 
+                                  {
+                                    for(var i=0; select[i]; ++i)
+                                    {
+                                      if(radio[i].selected)
+                                      {
+                                        q = q+1;
+                                      } 
+                                    }
+                                    if(q==0)
+                                    {
+                                      window.alert("Please select your degree program")
+                                      return false
+                                    }
+                                  else 
+                                  {
+                                    if(s7 == "")
+                                    {
+                                      window.alert("Pin Code is compulsory")
+                                      return false
+                                    }
+                                    else
+                                    {
+                                      if(s7.length<6 || s7.length>6)
+                                      {
+                                        window.alert("Pin Code is strictly always of 6 digits")
+                                        return false
+                                      }
+                                      else 
+                                      {
+                                        for(var i=0; checkbox[i]; ++i)
+                                        {
+                                          if(checkbox[i].checked)
+                                          {
+                                            m = m+1;
+                                          }
+                                        }
+                                        if(m==0)
+                                        {
+                                          window.alert("At least one checkbox must be checked")
+                                          return false
+                                        }
+                                      else 
+                                      {
+                                        if(s8.length<10 || s8.length>10)
+                                        {
+                                          window.alert("Phone Number is of length 10")
+                                          return false
+                                        }
+                                        else 
+                                        {
+                                          if(s9.length<10 || s9.length>10)
+                                          {
+                                            window.alert("Phone Number is of length 10")
+                                            return false
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+}
+}
+</script>
+</body> 
+</html>

@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        
+        <title> Features and Graphs </title>
+    </head>
+
+    <body>
+
+        <br><br><br>
+
+        <h1 align = 'center'> Headphone features </h1>
+
+        <br><br> 
+
+        <canvas id="HeadphonePrice" style="width:100%; max-width:850px"></canvas>
+
+        <br><br><br><br><br><br>
+
+        <canvas id="HeadphonePlaybackTime" style="width:100%; max-width:850px"></canvas>
+
+        <br><br><br><br><br><br>
+
+        <canvas id="HeadphoneSensitivity" style="width:100%; max-width:850px"></canvas>
+
+        <br><br><br><br><br><br>
+
+        <canvas id="HeadphoneBatteryRating" style="width:100%; max-width:850px"></canvas>
+
+        <br><br><br><br><br><br>
+
+        <canvas id="HeadphoneWeight" style="width:100%; max-width:850px"></canvas>
+
+        <br><br><br><br><br><br>
+
+
+        <script>
+         var HeadphoneModels = ['Boat 370 Rockerz', 'Boat 450 Rockerz', 'Boat 550 Rockerz', 'Sony -Wh 1000Xm4', 'Philips Audio SHK2000BL'];
+
+         var HeadphoneNames = ['Boat 370 Rockerz', 'Boat 450 Rockerz', 'Boat 550 Rockerz', 'Sony -Wh 1000Xm4', 'Philips Audio SHK2000BL'];
+
+         var HeadphonePrice = [2500, 4000, 5000, 30000, 1500, 300];
+
+         var HeadphonePlaybackTimeInHours = [12, 15, 20, 30, 14, 5];
+
+         var HeadphoneSensitivityInDecibels = [79, 108, 90, 117, 86, 65];
+
+         var HeadphoneBatteryRatingInMilliAmpereHours = [300, 300, 500, 650, 350, 60];
+
+         var HeadphoneWeightInGrams = [137, 168, 245, 260, 100, 150, 35];
+
+         var GraphColours = ['red', 'green', 'yellow', 'purple', 'orange', 'blue'];
+            
+         new Chart ('HeadphonePrice', {
+                type: 'bar',
+                data: {
+                    labels: HeadphoneNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: HeadphonePrice
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Price of headphone models'
+                    }
+                }
+            });
+
+
+            new Chart ('HeadphonePlaybackTime', {
+                type: 'bar',
+                data: {
+                    labels: HeadphoneNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: HeadphonePlaybackTimeInHours
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Playback time (in hours) of headphone models'
+                    }
+                }
+            });
+
+            new Chart ('HeadphoneSensitivity', {
+                type: 'bar',
+                data: {
+                    labels: HeadphoneNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: HeadphoneSensitivityInDecibels
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Sensitivity (in decibels) of headphone models'
+                    }
+                }
+            });
+
+            new Chart ('HeadphoneBatteryRating', {
+                type: 'bar',
+                data: {
+                    labels: HeadphoneNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: HeadphoneBatteryRatingInMilliAmpereHours
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Battery rating (in mAh) of headphone models'
+                    }
+                }
+            });
+
+            new Chart ('HeadphoneWeight', {
+                type: 'bar',
+                data: {
+                    labels: HeadphoneNames,
+                    datasets: [{
+                        backgroundColor: GraphColours,
+                        data: HeadphoneWeightInGrams
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Weight (in grams) of headphone models'
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
