@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .register{
+            /* animation-name: register;
+            animation-duration: 6s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite; */
+            text-align: center;
+            padding-top: 25px;
+            color : rgb(0, 89, 255);
+        }
+        /* @keyframes register {
+            0%{
+                font-size : 30px;
+            }
+            50%{
+                font-size: 0px;
+            }
+            100%{
+                font-size: 30px;
+            }
+        } */
+        span{
+            margin-left: 110px;
+        }
+        button{
+            margin-left: 110px;
+        }
+    </style>
+</head>
+<body style = "background:url(maxresdefault.jpg);">
+    <form action = "submit.html" method = "post" style = "border : solid 4px none;opacity:0.9;width:500px;height:600px;margin-left:405px;background-color:rgb(221, 217, 217);">
+      <h2 class = "register">Register Yourself!!</h2><br><br><br>
+      <span>Name</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" id = "myname"><br><br>
+      <span>Email</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "email" id = "myemail"><br><br>
+      <span>Password</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "password" id = "mypass"><br><br>
+      <span>Do you like this website ?</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No <input type = "radio" name = "ans" id = "radio">
+      Yes <input type = "radio" name = "ans" id = "radio"><br><br>
+      <span>Do you have any suggestions for us ?</span> <textarea style = "margin-left:110px;" name = "other" rows = "7" cols="35"></textarea><br><br>
+      <button onclick = "return formValidate()">Submit</button> 
+    </form> 
+    <script> 
+        function formValidate()
+        {
+            var name = document.getElementById("myname");
+            var s1 = name.value;
+
+            var pattern = /^(?=.*[@])$/;
+            var mail = document.getElementById("myemail");
+            var s2 = mail.value;
+
+            var pwFormat = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+            var pw = document.getElementById("mypass");
+            var s5 = pw.value;
+
+            var select = document.getElementsByName("ans");
+            var q = 0
+
+            var count = 0;
+
+            if(s1 == "") 
+            {
+                window.alert("Please give your name")
+                count++;
+                return false;
+            }
+            else{
+                if(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(s2)))
+                {
+                    window.alert("Enter email-id in proper format")
+                    count++;
+                    return false;
+                }
+                else{
+                    if(s5 == "")
+                    {
+                      window.alert("Password is compulsory to fill")
+                      count++;
+                      return false;
+                    }
+                    else{
+                        if(s5.length < 8)
+                        {
+                           window.alert("Minimum length of password should be 8")
+                           count++;
+                           return false;
+                        }
+                        else
+                        {
+                           if(!(pwFormat.test(s5))) 
+                           {
+                              window.alert("Password must contain at least one uppercase, at least one lowercase,\nat least one numeric digit and at least one special character")
+                              count++;
+                              return false;
+                           }
+                           else{
+                            for(var i=0; select[i]; ++i)
+                                    {
+                                      if(radio[i].checked)
+                                      {
+                                        q = q+1;
+                                      } 
+                                    }
+                                    if(q==0)
+                                    {
+                                      window.alert("It will be appreciated if you give answer of this question")
+                                      count++;
+                                      return false;
+                                    }
+                           }
+                        } 
+                        }
+                    }  
+                }
+                if(count == 0)
+                {
+                  window.open("responseSubmitted.html");
+                } 
+            }
+    </script>
+</body>
+</html>

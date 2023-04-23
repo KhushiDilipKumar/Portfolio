@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading{
+            animation-name: sponsor;
+            animation-duration: 1s;
+        }
+        @keyframes sponsor {
+            from{
+                font-size: 0px;
+            }
+            to{
+                font-size: 40px;
+            }
+        }
+        .title{
+            margin-left : 190px;
+        }
+        .underline{
+            position: relative;
+            color : #042e33;
+        }
+        .underline::after{ 
+            content : '';
+            width : 120px;
+            height : 5px;  
+            background-color: #38B3C2;
+            position: absolute;
+            margin-left : 600px;
+            margin-bottom: -3px;
+            left:0;
+            bottom:0;
+        }
+        .underline::after{
+            transform : scale(0,1);
+            transition: transform 0.3s ease;
+        }
+        .underline:hover::after{
+            transform : scale(1,1);
+        }
+        .row1{
+            border : solid 2px none;
+            width : 350px;
+            height : 150px;
+            float:left;
+            margin-left : 70px;
+            margin-right : 70px;
+            margin-top : 50px;
+            background-color: white;
+            Z-index : 1;
+            box-shadow : 0 3px 3px rgba(105,105,105,0.3);
+            transition: all 0.1s ease;
+            }
+        .row1:hover{
+            border-radius : 12%;
+            box-shadow : 0 3px 3px rgba(105,105,105,1);
+        }
+        .logo_alignment{
+            padding : 60px;
+            padding-left : 100px;
+            transition : all 0.8s ease;
+        }
+        .logo_alignment:hover{
+            transform : scale(1.2);   
+        }
+        .logo_alignment:hover{
+            transform : scale(1.2);
+        }
+        .logo_content{
+           margin-top:-50px;
+           margin-left: 57px;
+           font-size: 16px; 
+           color : white;
+           transition : all 3s ease;
+        }
+         .logo_content:hover{
+            color : black;
+        }  
+        .platinum{
+            margin-top:290px;
+        }
+        .row2{
+            float : left;
+            border : solid 2px none;
+            width : 350px;
+            height : 150px;
+            background-color: white;
+            Z-index : 1;
+            box-shadow : 0 3px 3px rgba(105,105,105,0.3);
+            transition: all 0.1s ease;
+            margin : 30px;
+            margin-top:50px;
+            }
+        .row2:hover{
+            border-radius : 12%;
+            box-shadow : 0 3px 3px rgba(105,105,105,1);
+        }
+        .row31{
+            clear : both;
+            float : left;
+            border : solid 2px none;
+            width : 350px;
+            height : 150px;
+            background-color: white;
+            Z-index : 1;
+            box-shadow : 0 3px 3px rgba(105,105,105,0.3);
+            transition: all 0.1s ease;
+            margin :  30px;
+            }
+        .row31:hover{
+            border-radius : 12%;
+            box-shadow : 0 3px 3px rgba(105,105,105,1);
+        }
+        .row2:hover{
+            border-radius : 12%;
+            box-shadow : 0 3px 3px rgba(105,105,105,1);
+        } 
+        .row3{
+            float : left;   
+            border : solid 2px none;
+            width : 350px;
+            height : 150px;
+            background-color: white;
+            Z-index : 1;
+            margin : 30px;
+            box-shadow : 0 3px 3px rgba(105,105,105,0.3);
+            transition: all 0.1s ease;
+        }
+        .row3:hover{
+            border-radius : 12%;
+            box-shadow : 0 3px 3px rgba(105,105,105,1);
+        }
+        .p1{
+            margin-left : 50px;
+        }
+        .gold{
+            margin-top: 500px;
+        }
+    </style>
+</head>
+<body bgcolor="#BDD7DA"> 
+    <h1 class = "heading" style = "text-align: center;border-radius : 12%;
+     box-shadow : 0 3px 3px rgba(105,105,105,1);width : 270px;height : 50px;margin-left:530px;">Sponsors</h1>
+    <h1 class= "underline" style = "text-align: center;">Title Sponsors</h1>
+    <div class="title">
+        <div class="row1">
+            <a href = "https://www.hackerearth.com/"><img class = "logo_alignment" src="hackerearth.svg"></a>
+            <h5 class="logo_content">Remotely hiring the best tech talent</h5>
+        </div>
+        <div class="row1">
+            <a href = "https://www.hackerearth.com/"><img class = "logo_alignment" src="hackerearth.svg"></a>
+            <h5 class="logo_content">Remotely hiring the best tech talent</h5>
+        </div>
+    </div>
+    <div>
+    </div>
+    
+    <div class = "platinum">
+        <h1 class= "underline" style = "text-align:center;">Platinum Sponsors</h1>
+    <div class = "p1">
+        <div class = "row2">
+            <a href = "https://www.hackerearth.com/"><img class = "logo_alignment" src="hackerearth.svg"></a>
+            <h5 class="logo_content">Remotely hiring the best tech talent</h5>
+        </div>
+        <div class = "row2">
+            <a href = "https://www.hackerearth.com/"><img class = "logo_alignment" src="hackerearth.svg"></a>
+            <h5 class="logo_content">Remotely hiring the best tech talent</h5>
+        </div>
+        <div class = "row2">
+            <a href = "https://www.hackerearth.com/"><img class = "logo_alignment" src="hackerearth.svg"></a>
+            <h5 class="logo_content">Remotely hiring the best tech talent</h5>
+        </div>
+    </div>
+    <div class = "p1">
+        <div class = "row31">
+            <a href = "https://www.hackerearth.com/"><img class = "logo_alignment" src="hackerearth.svg"></a>
+            <h5 class="logo_content">Remotely hiring the best tech talent</h5>
+        </div>
+        <div class = "row3">
+            <a href = "https://www.hackerearth.com/"><img class = "logo_alignment" src="hackerearth.svg"></a>
+            <h5 class="logo_content">Remotely hiring the best tech talent</h5>
+        </div>
+        <div class = "row3">
+            <a href = "https://www.hackerearth.com/"><img class = "logo_alignment" src="hackerearth.svg"></a>
+            <h5 class="logo_content">Remotely hiring the best tech talent</h5>
+        </div>
+    </div>
+    </div>
+
+    <div class = "gold">
+        <h1 class= "underline" style = "text-align:center;">Gold Sponsors</h1>
+    <div class = "p1">
+        <div class = "row2">
+            <a href = "https://www.hackerearth.com/"><img class = "logo_alignment" src="hackerearth.svg"></a>
+            <h5 class="logo_content">Remotely hiring the best tech talent</h5>
+        </div>
+        <div class = "row2">
+            <a href = "https://www.hackerearth.com/"><img class = "logo_alignment" src="hackerearth.svg"></a>
+            <h5 class="logo_content">Remotely hiring the best tech talent</h5>
+        </div>
+        <div class = "row2">
+            <a href = "https://www.hackerearth.com/"><img class = "logo_alignment" src="hackerearth.svg"></a>
+            <h5 class="logo_content">Remotely hiring the best tech talent</h5>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

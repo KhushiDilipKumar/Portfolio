@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        .bouncing-text {
+          position: relative;
+          display: flex;
+          font-size: 50px;
+          font-family: arial black; 
+          margin-left : 50px;
+          margin-top : 30px;
+        }
+        /* #4361ee */
+        .let, .us, .help, .you, .to, .choose, .the, .best {
+          color: white;
+          text-shadow: 0 3px #083254, 0 5px #083254, 0 7px #083254;
+          margin-left : 25px;
+        }
+
+        @keyframes bounce {
+          0%   { transform: scale(1,1) translateY(0); }
+          10%  { transform: scale(1.1,.9) translateY(0); }
+          30%  { transform: scale(.9,1.1)   translateY(-55px);}
+          50%  { transform: scale(1.05,.95) translateY(0); }
+          58%  { transform: scale(1,1) translateY(-7px); }
+          65%  { transform: scale(1,1) translateY(0);}
+          100% { transform: scale(1,1) translateY(0);}
+        }
+
+        .let {
+          animation: bounce 1s ease infinite;
+        }
+        .us {        
+          animation: bounce 1s ease infinite .1s;
+        }
+        .help {        
+          animation: bounce 1s ease infinite .2s;
+        }
+        .you {        
+          animation: bounce 1s ease infinite .3s;
+        }
+        .to {
+          animation: bounce 1s ease infinite .4s;
+        }
+        .choose {
+          animation: bounce 1s ease infinite .5s;
+        }
+        .the {
+          animation: bounce 1s ease infinite .6s;
+        }
+        .best {
+          animation: bounce 1s ease infinite .7s;
+        }
+        .bouncing-text:before, .bouncing-text:after {
+          content:"";
+          position: absolute;
+          width: 50px;
+          height:5px;
+          top:82px;
+          z-index:-1;
+        }
+    
+        .bouncing-text:before {
+          left:0;
+          animation: scale 1s linear infinite;
+        }
+        @keyframes scale {
+          25% {transform: scaleX(0.4);}
+          0% {transform: scaleX(1);}
+          50% {transform: scaleX(1);}
+          75% {transform: scaleX(0.9);}
+          100% {transform: scaleX(1);}
+        }
+
+        .bouncing-text:after {
+          left: 57px;
+          animation: scale 1s linear infinite .1s;
+        }
+        
+        .btn{
+            padding : 5px;
+            margin : 7px;    
+            margin-top : 150px;
+            font-weight : bold;
+            font-size : 16px;
+            background-color : transparent;
+            border : solid 4px black;
+            border-radius : 15%;
+            letter-spacing: 2px;
+            transition: all 0.4s ease-in-out;
+            text-transform: uppercase;
+            cursor : pointer;
+            margin-right : 50px;
+        } 
+        .btns{
+          margin-left : 460px;
+        }
+        .btn:hover{
+            background-color: black;
+            color : white;
+            /* transform : translateY(15px); */
+            transform : scale(1.2)
+        }
+        body{
+            margin : 0px;
+        }
+        footer .bottom{
+            border : solid 2px rgb(1, 1, 19);
+            width : 1345px;
+            height : 400px;
+            margin : 0px;
+            margin-top : 50px;
+            background-color : rgb(1, 1, 19)
+        }
+        
+        .social_footer_ul { display:table; margin:15px auto 0 auto; list-style-type:none; position:relative; }
+        .social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
+        .social_footer_ul li a { color:#CCC; border:solid 1px #CCC; padding:8px;border-radius:50%;}
+        .social_footer_ul li i {  width:20px; height:20px; text-align:center;}
+
+        .list{
+            list-style-type: none;
+            position : relative;
+            margin-left : 290px;
+        }
+        .list li{
+            margin-top : 35px;
+            margin-bottom: 20px;
+            margin-left: 60px;
+            display : inline-block;
+        }
+        .list li a{
+            border : solid 2px white;
+            border-radius : 20%;
+            color : white;
+            text-decoration: none;
+            padding : 5px;
+            font-size: 20px;
+        }
+        .list li a:hover{
+            color : rgb(46, 46, 184);
+            border-color: rgb(46, 46, 184);
+        }
+        /* .info{
+            position : relative;
+            right : 150px;
+        } */
+        footer .form-control {
+          background-color: rgb(26, 26, 73);
+          box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+          border: none;
+          border-radius : 5%;
+          resize: none;
+          color: gray;
+          padding: 0.7em 1em;
+          margin-left : 510px;
+        }
+        footer .form-control:focus {
+          background-color: white;
+        }
+        #exampleInputEmail1{
+            height : 20px;
+            width : 300px;
+        }
+        #exampleMessage{
+            height : 60px;
+            width : 300px;
+        }
+        .send_btn{
+            margin-left:630px;
+            height : 30px;
+            width : 90px;
+            border-color: white;
+            color:white;
+            background-color: transparent;
+            border-radius: 20%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+        .send_btn:hover{
+            color : rgb(46, 46, 184);
+            border-color: rgb(46, 46, 184);
+        }
+    </style>
+</head>
+<body style = "background-image: url(back.jpg)">
+    <!-- <h1 class = "heading">Let us help you to choose the best!!</h1> -->
+    <!-- trial -->
+    <div class="bouncing-text">
+        <div class="let">LET</div>
+        <div class="us">US</div>
+        <div class="help">HELP</div>
+        <div class="you">YOU</div>
+        <div class="to">TO</div>
+        <div class="choose">CHOOSE</div>
+        <div class="the">THE</div>
+        <div class="best">BEST</div>
+        <div class="shadow"></div>
+        <div class="shadow-two"></div>
+      </div>
+    <!-- trial -->
+    <div class = "btns">
+    <button onClick = "Phone_details()" class = "btn">Phone</button>
+    <button onClick = "Laptop_details()" class = "btn">Laptop</button>
+    <button onClick = "Headphone_details()" class = "btn">HeadPhone</button> 
+    </div>
+</body>
+<footer>
+    <div class = "bottom">
+        <ul class="social_footer_ul">
+            <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+        <ul class = "list">
+            <li><a href="E:/Portfolio/WT_Project.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+        <h3 style = "color:white;text-align: center;">Contact Us</h3>
+        <div class="col-md-5">
+            <input style="margin-left:510px" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"><br><br>
+            <textarea style="margin-left:510px" class="form-control" id="exampleMessage" placeholder="Message"></textarea><br><br>
+            <button class = "send_btn" onClick = "submit()">Submit</button>
+        </div> 
+    </div>
+</footer>
+<script> 
+  function Phone_details() {
+    window.location.href="E:/Portfolio/Innovative Project _Phones.html"
+  }
+  function Laptop_details() {
+    window.location.href="E:/Portfolio/Innovative Project _ Laptops.html";  
+  }
+  function Headphone_details() { 
+    window.location.href="E:/Portfolio/Innovative Project _Headphones.html";  
+  }
+  function submit() 
+  {
+    document.write("Hello");
+    var email = document.getElementById("exampleInputEmail1");
+    var msg = document.getElementById("exampleMessage");
+    console.log("User's Email Id - "+email);
+    document.write("<br>");
+    document.write("User's Email Id - "+email);
+    document.write("<br>");
+    document.write("Message - "+msg);
+    
+    
+    
+    document.write("<br>");
+    document.write("Query submitted successfully!!")
+  }
+</script>
+
+</html>

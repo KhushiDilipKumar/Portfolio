@@ -1,0 +1,76 @@
+body{
+    margin : 0px;
+}
+.nav-header{
+    margin-top : 5px;
+    line-height: 30px;
+    background-color: white;
+    box-shadow : 0 5px 5px rgb(116, 110, 110);
+}
+.social-icons{
+    list-style-type: none;
+    float : right;
+    display : flex;
+    margin-right: 10px;
+    /* flex-direction: row; */
+}
+.social-icons li{
+    margin-left : 12px;
+    margin-right : 12px;
+    font-size: 25px;
+    color : black;
+    transition: all 0.3s;
+}
+.social-icons li a{
+    color : black;
+    text-decoration: none;
+}
+.social-icons li :hover{
+    transform: scale(1.2);
+}
+.links{
+    list-style-type: none;
+    float :right;
+    display : flex;
+    flex-direction: row;
+}
+.links li {
+    margin-left : 12px;
+    margin-right : 12px;
+    font-size: 20px;
+    margin-top : 0px;
+    transition: all 0.3s;
+}
+.links li a{
+    color : black;
+    text-decoration: none;
+}
+.links li:hover{
+    transform: scale(1.2)
+}
+.start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: welcome;
+    animation-duration: 3s;
+    margin : 200px;
+}
+@keyframes welcome {
+    from{
+        font-size : 0px;
+        color : orange;
+    }
+    to{
+        font-size: 100px;
+        color : red;
+    }
+}
+.links{
+    /* height : 0;
+    overflow : hidden;
+    transition : var(--transition); */
+}
+.show-links{
+    height:10rem;
+}
